@@ -1,1 +1,38 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# ---- VS Code ----
+.vscode/
+*.code-workspace
+
+# ---- System ----
+.DS_Store
+Thumbs.db
+
+# ---- Secrets / configs ----
 secrets.env
+*.key
+*.pem
+
+# ---- Logs / tmp ----
+*.log
+*.tmp
+
+# ---- Jupyter / notebooks ----
+.ipynb_checkpoints/
+*.ipynb
+
+# ---- Data / cache ----
+data/
+*.csv
+*.parquet
+*.db
