@@ -49,9 +49,34 @@ Projekt pobiera i ładuje poniższe encje z Northwind:
 
 ---
 
+## 🔹 Wymagania wstępne
+
+Do uruchomienia projektu wymagane jest:
+- **Darmowe konto w [Neon.tech](https://neon.tech/)**  
+- Utworzenie **podstawowej bazy PostgreSQL** (np. `etlens_fakestore`)  
+- Dane logowania (host, user, password, port, database) do wpisania w `secrets.env`  
+
+---
+
 ## 🔹 Jak uruchomić
 
 1. **Sklonuj repozytorium**  
    ```bash
    git clone https://github.com/chrisgoldadev/etlens-northwind-etl.git
    cd etlens-northwind-etl
+
+2. **Utwórz i aktywuj wirtualne środowisko**
+python -m venv .venv
+source .venv/bin/activate   # Linux/Mac
+.venv\Scripts\activate      # Windows
+
+3. **Zainstaluj zależności**
+pip install -r requirements.txt
+
+4.**Utwórz plik secrets.env z danymi Neon:**
+DATABASE_URL=postgresql+psycopg://USER:PASSWORD@HOST:5432/etlens_fakestore?sslmode=require
+
+5. **Uruchom ETL:**
+python main.py
+
+
